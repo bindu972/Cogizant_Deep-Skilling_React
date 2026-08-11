@@ -12,7 +12,7 @@ namespace SingletonPatternExample
             Logger secondLogger = Logger.GetInstance();
             secondLogger.Log("User Logged In");
 
-            if (logger1 == logger2)
+            if (firstLogger == secondLogger)
             {
                 Console.WriteLine("Both objects are the same instance.");
             }
