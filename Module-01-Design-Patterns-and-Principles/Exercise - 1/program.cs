@@ -6,11 +6,11 @@ namespace SingletonPatternExample
     {
         static void Main(string[] args)
         {
-            var appLogger = new Logger();
-            appLogger.Log("Application initialized");
+            Logger firstLogger = Logger.GetInstance();
+            firstLogger.Log("Application Started");
 
-            Logger logger2 = Logger.GetInstance();
-            logger2.Log("User Logged In");
+            Logger secondLogger = Logger.GetInstance();
+            secondLogger.Log("User Logged In");
 
             if (logger1 == logger2)
             {
