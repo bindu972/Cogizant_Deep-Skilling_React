@@ -6,8 +6,8 @@ namespace SingletonPatternExample
     {
         static void Main(string[] args)
         {
-            Logger logger1 = Logger.GetInstance();
-            logger1.Log("Application Started");
+            var appLogger = new Logger();
+            appLogger.Log("Application initialized");
 
             Logger logger2 = Logger.GetInstance();
             logger2.Log("User Logged In");
